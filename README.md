@@ -5,6 +5,10 @@ Proyek ini merupakan sistem rekomendasi anime yang dibangun menggunakan pendekat
 
 Sistem diimplementasikan dalam bentuk **aplikasi berbasis web** menggunakan framework **Flask**, sehingga dapat diakses melalui browser dan mendukung dua mode rekomendasi, yaitu mode berbasis anime dan mode berbasis pengguna (user-based).
 
+<img width="1351" height="607" alt="tampilanAwal" src="https://github.com/user-attachments/assets/79059a42-5275-46d1-8743-289c9d601c9c" />
+<img width="1352" height="606" alt="TampilanUser-Based" src="https://github.com/user-attachments/assets/12287e14-ee31-41bc-9a14-bc9d2577fc67" />
+
+
 ---
 
 ## 🚀 Fitur Utama
