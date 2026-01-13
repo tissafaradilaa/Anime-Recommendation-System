@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+label {
+    font-weight: 600;
+}
+
+select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background: #ff7a18;
+    background: linear-gradient(90deg, #ff7a18, #ffb347);
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.result-box {
+    margin-top: 30px;
+}
+
+.result-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-box span {
+    color: #ff7a18;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #ffecd2;
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #fff3e0;
+}
+
+.anime-name {
+    font-weight: 600;
+}
+
+.score {
+    font-weight: bold;
+    color: #ff7a18;
+}
+
+.error-box {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #ffe6e6;
+    color: #a40000;
+    border-left: 5px solid #ff4d4d;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #555;
+}
+
+/* =========================
+   MODE SWITCH (ANIME vs USER)
+   ========================= */
+.mode-switch {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.mode-switch a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #ff7a18;
+    border: 2px solid #ff7a18;
+    transition: all 0.25s ease;
+}
+
+.mode-switch a:hover {
+    background: #ff7a18;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.mode-switch a.active {
+    background: linear-gradient(90deg, #ff7a18, #ffb347);
+    color: #fff;
+    border: none;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   INPUT BOX (ANIME & USER)
+   ========================= */
+input[list],
+input[type="number"] {
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff7a18;
+    box-shadow: 0 0 6px rgba(255,122,24,0.4);
+}
+
+/* =========================
+   USER MODE CARD
+   ========================= */
+.user-box {
+    max-width: 420px;
+    margin: 0 auto 30px auto;
+    background: #fff7ed;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.user-box h2 {
+    margin-bottom: 10px;
+}
+
+.user-box p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}

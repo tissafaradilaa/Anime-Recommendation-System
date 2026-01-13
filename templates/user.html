@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>User-Based Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>👤 User-Based Recommendation</h1>
+    <p class="subtitle">
+        Personalized Recommendation Based on User History
+    </p>
+
+    <!-- MODE SWITCH -->
+    <div class="mode-switch">
+        <a href="/">🎬 Mode Anime</a>
+        <a href="/user" class="active">🔑 Mode User-Based</a>
+    </div>
+
+    <!-- USER INPUT CARD -->
+    <div class="user-box">
+        <h2>Masukkan User ID</h2>
+        <p>
+            Sistem akan merekomendasikan anime berdasarkan
+            histori rating user.
+        </p>
+
+        <form method="POST">
+            <input
+                type="number"
+                name="user_id"
+                placeholder="Contoh: 123"
+                required
+            >
+            <br><br>
+            <button type="submit">🔍 Cari Rekomendasi</button>
+        </form>
+    </div>
+
+    {% if error %}
+    <div class="error-box">
+        ⚠ {{ error }}
+    </div>
+    {% endif %}
+
+    {% if recommendations is not none %}
+    <div class="result-box">
+        <h2>
+            Rekomendasi Anime<br>
+            <span>berdasarkan preferensi User ID {{ user_id }}</span>
+        </h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Anime</th>
+                    <th>Genre</th>
+                    <th>Skor</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i, row in recommendations.iterrows() %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td class="anime-name">{{ row.name }}</td>
+                    <td>{{ row.genre }}</td>
+                    <td class="score">
+                        {{ "%.3f"|format(row.final_score) }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+</div>
+
+<footer>
+    <p>© 2025 Anime Recommendation System</p>
+</footer>
+
+</body>
+</html>
